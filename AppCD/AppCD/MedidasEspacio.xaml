@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppCD.MedidasEspacio">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+            <Picker x:Name="SBPOS" Title="--Seleccione una tienda--">
+                <Picker.Items>
+                    <x:String>Sirena Villa Mella</x:String>
+                    <x:String>Bravo Churchill</x:String>
+                    <x:String>Plaza Lama 27</x:String>
+                    <x:String>Ole Jacobo Majluta</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label x:Name="LblTP" Text="Cremas Dentales"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+            <Label Text="Anticaries"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp1"/>
+            <Label Text="Triple Acción"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp2"/>
+            <Label Text="Total Base"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp3"/>
+            <Label Text="Total Profesional"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp4"/>
+            <Label Text="Luminous White"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp5"/>
+            <Label Text="Pro-Alivio Base 2-Pack"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp6"/>
+            <Label Text="Pro-Alivio CSPR"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp7"/>
+            <Label Text="Resto Colgate"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp8"/>
+            <Label x:Name="LblTotalTPCP" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+            
+            <Label Text="Oral B"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp9"/>
+            <Label Text="Crest"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp10"/>
+            <Label x:Name="LblTotalTPPG" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+            
+            <Label Text="Sensodyne"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp11"/>
+            <Label Text="Aquafresh"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp12"/>
+            <Label Text="Centra Line"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp13"/>
+            <Label Text="Marca Privada"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp14"/>
+            <Label Text="Otras Marcas"/>
+            <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp15"/>
+                <Label x:Name="LblTotalTP" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                <Label x:Name="LblPORCTP" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                <Label x:Name="LblTB" Text="Cepillos Dentales"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+                <Label Text="Colgate TB"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp16"/>
+                <Label Text="Oral B"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp17"/>
+                <Label Text="Gum"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp18"/>
+                <Label Text="Centra Line"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp19"/>
+                <Label Text="Otros"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp20"/>
+                <Label Text="Marca Privada"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp21"/>
+                <Label x:Name="LblTotalTB" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                <Label x:Name="LblPORCTB" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                <Label x:Name="LblEB" Text="Enjuagues Bucales"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+                <Label Text="Frescura"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp22"/>
+                <Label Text="Pro-Alivio"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp23"/>
+                <Label Text="Luminous White"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp24"/>
+                <Label Text="Otros"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp25"/>
+                <Label x:Name="LblTotalEBCP" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+
+                <Label Text="Listerine"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp26"/>
+                <Label Text="Scope"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp27"/>
+                <Label Text="Septicon"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp28"/>
+                <Label Text="Centra Line"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp29"/>
+                <Label Text="Marca Privada"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp30"/>
+                <Label Text="Otros"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp31"/>
+                <Label x:Name="LblTotalEB" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                <Label x:Name="LblPORCEB" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                <Label x:Name="LblDF" Text="Hilos Dentales"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+                <Label Text="Colgate DF"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp32"/>
+                <Label Text="Oral B"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp33"/>
+                <Label Text="Johnson y Johnson"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp34"/>
+                <Label Text="Marca Privada"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp35"/>
+                <Label Text="Otros"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp36"/>
+                <Label x:Name="LblTotalDF" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                <Label x:Name="LblPORCDF" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                <Label x:Name="LblTS" Text="Hilos Dentales"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+                <Label Text="Protex"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp37"/>
+                <Label Text="Palmolive Base"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp38"/>
+                <Label Text="Palmolive Natureza"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp39"/>
+                <Label Text="Lavador"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp40"/>
+                <Label Text="Irish Spring"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp41"/>
+                <Label x:Name="LblTotalTSCP" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                
+                <Label Text="Dove"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp42"/>
+                <Label Text="Rexona"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp43"/>
+                <Label Text="Kinder"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp44"/>
+                <Label x:Name="LblTotalTSUNI" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                
+                <Label Text="P&G"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp45"/>
+                <Label Text="Cesar Iglesias"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp46"/>
+                <Label Text="Marca Privada"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp47"/>
+                <Label Text="Otras Marcas"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp48"/>
+                <Label x:Name="LblTotalDF" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                <Label x:Name="LblPORCDF" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+                
+                <Label Text="Otros"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp49"/>
+                <Label Text="Otros"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp50"/>
+                <Label Text="Otros"/>
+                <Entry Keyboard="Numeric" Placeholder="respuesta" x:Name="Resp01"/>
+
+                <Button Text="Calcular Total y Porcentajes"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource Key=EstiloDeBoton2}"/>
+                
+                <Button Text="Enviar Formulario"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Button_Clicked_1"
+                    Style="{StaticResource Key=EstiloDeBoton2}"/>
+
+
+            </StackLayout>
+        </ScrollView>
+            
+    </ContentPage.Content>
+</ContentPage>

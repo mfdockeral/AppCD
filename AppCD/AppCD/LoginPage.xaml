@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppCD.LoginPage">
+
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On
+                    Platform="iOS"
+                    Value="10, 10, 10, 50" />
+                <On
+                    Platform="Android"
+                    Value="10, 10, 10, 20" />
+                <On
+                    Platform="UWP"
+                    Value="0, 10, 0, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Image HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Start"
+                   Source="ProfitLogo.png"
+                   WidthRequest="300"
+                   HeightRequest="300"/>
+
+            <!-- Agregar el Binding al campo  Email-->
+
+
+            <Entry Placeholder="Usuario"
+                  x:Name="TxtUser"
+                   Text="{Binding User}"
+                   HorizontalOptions="FillAndExpand"
+                   Keyboard="Numeric"
+                   Style="{StaticResource Key=EstiloDeEntrada}"/>
+
+            <!-- Agregar el Binding al campo  Password-->
+
+            <Entry Placeholder="Contraseña"
+                   Text="{Binding Password}"
+                   x:Name="TxtPassword"
+                   HorizontalOptions="FillAndExpand"
+                   IsPassword="True"
+                   Style="{StaticResource Key=EstiloDeEntrada}"/>
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+
+            <!-- Agregar el Binding al comando Login-->
+
+            <Button Text="Iniciar Sesion"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource Key=EstiloDeBoton}"/>
+
+            <!--Button Text="Iniciar Sesion"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="Red"
+                    BackgroundColor="White"
+                    CornerRadius="5"
+                    Command="{Binding Login}"
+                    IsEnabled="{Binding CanLogin}"
+                    Style="{StaticResource Key=EstiloDeBoton}"/-->
+
+            <!-- Agregar el Binding al comando Register-->
+
+            <!--Button Text="Registrarse"
+                    TextColor="Blue"
+                    BackgroundColor="Transparent"/-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

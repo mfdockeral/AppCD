@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppCD.MenuPrincipalDetail"
+             Title="Menú Principal">
+    
+  <StackLayout Padding="10">
+        <Image HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Start"
+                   Source="ProfitLogo.png"
+                   WidthRequest="200"
+                   HeightRequest="200"/>
+        <Button Text="Cumplimiento de CV" 
+                    x:Name="Btn1"
+                    Style="{StaticResource Key=EstiloDeBoton2}"
+                    Clicked="Btn1_Clicked"/>
+        <Button Text="Radar de Exhibiciones"
+                    x:Name="Btn2"
+                    Style="{StaticResource Key=EstiloDeBoton2}"
+                    Clicked="Btn2_Clicked"/>
+        <Button Text="Medidas de Espacio" 
+                  
+                    x:Name="Btn3"
+                    Style="{StaticResource Key=EstiloDeBoton2}"
+                    Clicked="Btn3_Clicked"/>
+        <Button Text="Faltantes" 
+                   
+                    x:Name="Btn4"
+                    Style="{StaticResource Key=EstiloDeBoton2}"
+                    Clicked="Btn4_Clicked"/>
+        <Button Text="Precios Regulares" 
+                   
+                    x:Name="Btn5"
+                    Style="{StaticResource Key=EstiloDeBoton2}"
+                    Clicked="Btn5_Clicked"/>
+        <Button Text="Precios de Oferta" 
+                    
+                    x:Name="Btn6"
+                    Style="{StaticResource Key=EstiloDeBoton2}"
+                    Clicked="Btn6_Clicked"/>
+        <Button Text="Levantamiento SOA Grupo Ramos" 
+                  
+                    x:Name="Btn7"
+                    Style="{StaticResource Key=EstiloDeBoton2}"
+                    Clicked="Btn7_Clicked"/>
+    </StackLayout>
+</ContentPage>
