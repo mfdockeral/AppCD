@@ -54,21 +54,18 @@
 
             <!-- Agregar el Binding al comando Login-->
 
-            <Button Text="Iniciar Sesion"
-                    VerticalOptions="EndAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Clicked="Button_Clicked"
-                    Style="{StaticResource Key=EstiloDeBoton}"/>
-
             <!--Button Text="Iniciar Sesion"
                     VerticalOptions="EndAndExpand"
                     HorizontalOptions="FillAndExpand"
-                    TextColor="Red"
-                    BackgroundColor="White"
-                    CornerRadius="5"
+                    Clicked="Button_Clicked"
+                    Style="{StaticResource Key=EstiloDeBoton}"/-->
+
+            <Button Text="Iniciar Sesion"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
                     Command="{Binding Login}"
                     IsEnabled="{Binding CanLogin}"
-                    Style="{StaticResource Key=EstiloDeBoton}"/-->
+                    Style="{StaticResource Key=EstiloDeBoton}"/>
 
             <!-- Agregar el Binding al comando Register-->
 

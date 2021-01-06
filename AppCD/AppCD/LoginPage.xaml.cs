@@ -17,7 +17,7 @@ namespace AppCD
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
 	{
-		async private void Button_Clicked(object sender, EventArgs e)
+		/*async private void Button_Clicked(object sender, EventArgs e)
 		{
             if (TxtUser.Text == "602" && TxtPassword.Text == "profit26")
 			{
@@ -29,24 +29,24 @@ namespace AppCD
                 await DisplayAlert("ERROR!", "Datos ingresados no son los correctos", "Ok");
                 return;
 			}
-		}
+		}*/
 
 
 
-		private const string URL = @"10.133.68.156";
+		private const string URL = @"http://66.42.91.17:81/api/profit_usuarios/id";
 
         #region Propiedades
-        private string _user;
-        public string User
+        private string _cod;
+        public string Cod
         {
             get
             {
-                return _user;
+                return _cod;
             }
 
             set
             {
-                _user = value;
+                _cod = value;
                 this.OnPropertyChanged();
             }
         }
@@ -69,7 +69,7 @@ namespace AppCD
         public bool CanLogin { get { return !IsBusy; } }
 
         public Command Login { get; set; }
-      
+        //public Command Register { get; set; }
         #endregion Propiedades
 
         private HttpClient client = new HttpClient();
@@ -79,9 +79,14 @@ namespace AppCD
             InitializeComponent();
 
             Login = new Command(OnLogin);
-          
+            //Register = new Command(OnRegister);
             BindingContext = this;
         }
+
+        /*private async void OnRegister(object obj)
+        {
+            await Navigation.PushAsync(new RegisterPage());
+        }*/
 
         private async void OnLogin()
         {
@@ -89,7 +94,7 @@ namespace AppCD
 
             var credentials = new
             {
-                user = User,
+                cod = Cod,
                 password = Password
             };
 
@@ -124,5 +129,5 @@ namespace AppCD
 
             IsBusy = false;
         }
-	}
+    }
 }
