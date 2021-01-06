@@ -29,7 +29,7 @@ namespace AppCD
 
 		async private void Btn3_Clicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new MedidasEspacio());
+			await Navigation.PushAsync(new MedidasEspacioTP());
 		}
 
 		async private void Btn4_Clicked(object sender, EventArgs e)
