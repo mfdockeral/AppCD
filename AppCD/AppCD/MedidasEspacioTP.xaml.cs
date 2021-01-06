@@ -27,7 +27,7 @@ namespace AppCD
 
 		public void Variables()
 		{
-
+			POS = Resp0.Text;
 			Rsp1 = Convert.ToInt32(Resp1.Text);
 			Rsp2 = Convert.ToInt32(Resp2.Text);
 			Rsp3 = Convert.ToInt32(Resp3.Text);
@@ -48,8 +48,9 @@ namespace AppCD
 			Calc2 = Rsp9 + Rsp10;
 			Total = Calc1 + Calc2 + Rsp11 + Rsp12 + Rsp13 + Rsp14 + Rsp15;
 			PorcentajeTP = 1.0 * Calc1 / Total;
-			POS = Convert.ToString(SBPuntos.SelectedItem);
+			//POS = Convert.ToString(SBPuntos.SelectedItem);
 
+			ME.question0 = POS;
 			ME.question1 = Rsp1;
 			ME.question2 = Rsp2;
 			ME.question3 = Rsp3;
@@ -69,18 +70,18 @@ namespace AppCD
 		}
 
 
-		async private void Btn1_Clicked(object sender, EventArgs e)
+		private void Btn1_Clicked(object sender, EventArgs e)
 		{
 			Variables();
 
 			var data = contenedor.Children.OfType<Entry>();
-			int inicio = 1;
-			int final = 58;
+			int inicio = 0;
+			int final = 59;
 
 
 			if (data.Any())
 				{
-				final = 70;
+				final = 71;
 				}
 
 			inicio = final;
@@ -95,14 +96,15 @@ namespace AppCD
 				else
 				{
 					item2.PlaceholderColor = Color.White;
-					item2.BackgroundColor = Color.Red;					
+					item2.BackgroundColor = Color.Red;
+					
 				}
+		
 
 			}
 
 
-
-	/*		if (!contenedor.Children.OfType<Entry>().ToList().Any(null))
+		/*	if (contenedor.Children.OfType<Entry>().ToList().Any(null))
 			{
 				LblTotalTPCP.Text = Convert.ToString(Calc1);
 				LblTotalTPPG.Text = Convert.ToString(Calc2);
@@ -110,147 +112,36 @@ namespace AppCD
 				LblPorcentajeTP.Text = PorcentajeTP.ToString("p02");
 			}*/
 
+			if (contenedor.Children.OfType<Entry>().Any() != null)
+			{
+				LblTotalTPCP.Text = Convert.ToString(Calc1);
+				LblTotalTPPG.Text = Convert.ToString(Calc2);
+				LblTotalTP.Text = Convert.ToString(Total);
+				LblPorcentajeTP.Text = PorcentajeTP.ToString("p02");
+			}
+
 			
-			 
-
-
-			if (Resp1 != null)
-			{
-				if (Resp1.Text != null)
-				{
-					if (Resp2.Text != null)
-					{
-						if (Resp3.Text != null)
-						{
-							if (Resp4.Text != null)
-							{
-								if (Resp5.Text != null)
-								{
-									if (Resp6.Text != null)
-									{
-										if (Resp7.Text != null)
-										{
-											if (Resp8.Text != null)
-											{
-												if (Resp9.Text != null)
-												{
-													if (Resp10.Text != null)
-													{
-														if (Resp11.Text != null)
-														{
-															if (Resp12.Text != null)
-															{
-																if (Resp13.Text != null)
-																{
-																	if (Resp14.Text != null)
-																	{
-																		if (Resp15.Text != null)
-																		{
-																			LblTotalTPCP.Text = Convert.ToString(Calc1);
-																			LblTotalTPPG.Text = Convert.ToString(Calc2);
-																			LblTotalTP.Text = Convert.ToString(Total);
-																			LblPorcentajeTP.Text = PorcentajeTP.ToString("p02");
-																			
-																		}
-																		else
-																		{
-																			await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-																			return;
-																		}
-																	}
-																	else
-																	{
-																		await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-																		return;
-																	}
-
-																}
-																else
-																{
-																	await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-																	return;
-																}
-															}
-															else
-															{
-																await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-																return;
-															}
-														}
-														else
-														{
-															await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-															return;
-														}
-													}
-													else
-													{
-														await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-														return;
-													}
-												}
-												else
-												{
-													await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-													return;
-												}
-											}
-											else
-											{
-												await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-												return;
-											}
-										}
-										else
-										{
-											await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-											return;
-										}
-									}
-									else
-									{
-										await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-										return;
-									}
-								}
-								else
-								{
-									await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-									return;
-								}
-							}
-							else
-							{
-								await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-								return;
-							}
-						}
-						else
-						{
-							await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-							return;
-						}
-					}
-					else
-					{
-						await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-						return;
-					}
-				}
-				else
-				{
-					await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-					return;
-				}
-			}
-			else
-			{
-				await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
-				return;
-			}
 		}
 		async private void Btn2_Clicked(object sender, EventArgs e)
 		{
+			var data = contenedor.Children.OfType<Entry>().Any();
+
+
+			if (data == null)
+			{
+				
+				await this.DisplayAlert("Error!", "No puede dejar campos vacíos", "Ok");
+				
+			}
+			else
+			{
+				LblTotalTPCP.Text = Convert.ToString(Calc1);
+				LblTotalTPPG.Text = Convert.ToString(Calc2);
+				LblTotalTP.Text = Convert.ToString(Total);
+				LblPorcentajeTP.Text = PorcentajeTP.ToString("p02");
+				await Navigation.PushModalAsync(new MedidasEspacioTB());
+			}
+			
 
 		}
 

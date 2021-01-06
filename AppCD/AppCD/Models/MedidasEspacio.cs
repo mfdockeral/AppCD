@@ -17,6 +17,7 @@ namespace AppCD.Models
 		public int question9 { get; set; }
 		public int question10 { get; set; }
 		public int question11 { get; set; }
+		public string question0 { get; internal set; }
 		public int question12 { get; set; }
 		public int question13 { get; set; }
 		public int question14 { get; set; }

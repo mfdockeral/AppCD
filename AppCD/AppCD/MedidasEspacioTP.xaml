@@ -7,9 +7,12 @@
              x:Class="AppCD.MedidasEspacioTP">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout >
 
-                <Picker Title="--Seleccione una tienda--"
+            <StackLayout >
+                
+                    <StackLayout >
+
+                <!--Picker Title="Seleccione una tienda"
                     TitleColor="Gray" x:Name="SBPuntos">
                     <Picker.Items>
                         <x:String>Sirena Villa Mella</x:String>
@@ -17,12 +20,19 @@
                         <x:String>Jumbo Luperon</x:String>
                         <x:String>Ole Playa Boca Chica</x:String>
                     </Picker.Items>
-                </Picker>
+                </-->
 
-                <StackLayout x:Name="contenedor">
+                <Label Text="Punto de Venta" x:Name="LblTP0" Style="{StaticResource Key=EstiloDeEtiquetas}" />
+                <Label Text="Tienda" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp0"/>
+
                     
-                 <Label Text="Cremas Dentales" x:Name="LblTP" Style="{StaticResource Key=EstiloDeEtiquetas}" />
+                    
+                <Label Text="Cremas Dentales" x:Name="LblTP" Style="{StaticResource Key=EstiloDeEtiquetas}" />
                 <Label Text="Anticaries" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        
+                    <StackLayout x:Name="contenedor">
+                        
                 <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp1"/>
                 <Label Text="Triple Acción" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
                 <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp2"/>
@@ -63,6 +73,7 @@
                 <Button Text="Siguiente Categoría" x:Name="Btn2" Style="{StaticResource Key=EstiloDeBoton2}" Clicked="Btn2_Clicked"/>
                 </StackLayout>
             </StackLayout>
+                </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
