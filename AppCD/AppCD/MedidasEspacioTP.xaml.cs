@@ -114,7 +114,7 @@ namespace AppCD
 			 
 
 
-			/*if (Resp1 != null)
+			if (Resp1 != null)
 			{
 				if (Resp1.Text != null)
 				{
@@ -247,7 +247,7 @@ namespace AppCD
 			{
 				await DisplayAlert("ERROR", "No puede dejar el campo **Otras Marcas** vacío", "Ok");
 				return;
-			}*/
+			}
 		}
 		async private void Btn2_Clicked(object sender, EventArgs e)
 		{
