@@ -104,13 +104,7 @@ namespace AppCD
 			}
 
 
-		/*	if (contenedor.Children.OfType<Entry>().ToList().Any(null))
-			{
-				LblTotalTPCP.Text = Convert.ToString(Calc1);
-				LblTotalTPPG.Text = Convert.ToString(Calc2);
-				LblTotalTP.Text = Convert.ToString(Total);
-				LblPorcentajeTP.Text = PorcentajeTP.ToString("p02");
-			}*/
+		
 
 			if (contenedor.Children.OfType<Entry>().Any() != null)
 			{

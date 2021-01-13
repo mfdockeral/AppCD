@@ -33,7 +33,7 @@ namespace AppCD
 
 
 
-		private const string URL = @"http://66.42.91.17:81/api/profit_usuarios/1000";
+		public const string URL = @"http://66.42.91.17:81/api/profit_usuarios/1000";
 
         #region Propiedades
         private string _cod;
@@ -92,31 +92,18 @@ namespace AppCD
         {
             IsBusy = true;
 
-            string payload = JsonConvert.SerializeObject(new
+            string credentials = JsonConvert.SerializeObject(new
             {
-                
-
                 username = Cod,
                 password = Password,
             });
 
             //var client = new HttpClient();
-            var content = new StringContent(payload, Encoding.UTF8, "application/json");
+            var content = new StringContent(credentials, Encoding.UTF8, "application/json");
 
-            var response = await client.PostAsync(URL, content);
-
-            /*HttpResponseMessage response1 = await client.GetAsync("http://66.42.91.17:81/api/profit_usuarios/1000");
-            await DisplayAlert("Hola",Convert.ToString(response1),"Ok");*/
-
-            //await DisplayAlert("Hola", Convert.ToString(URL), "Ok");
-
+            var response = await client.PostAsync(URL, content);    
+          
             
-            
-            //var response = await this.client.PostAsync(URL, content);
-
-            
-            var valor = response;
-            //await DisplayAlert("Hola",Convert.ToString(response),"Ok");
             if (response.IsSuccessStatusCode)
             {
                 var jsonResponse = await response.Content.ReadAsStringAsync();

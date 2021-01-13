@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="AppCD.MedidasEspacioSuav">
+             x:Class="AppCD.MedidasEspacioGDsf">
     <ContentPage.Content>
         <ScrollView>
 
@@ -12,26 +12,22 @@
 
                 <StackLayout >
 
-                    <Label Text="Suavizantes" x:Name="LblTP" Style="{StaticResource Key=EstiloDeEtiquetas}" />
+                    <Label Text="Gel Desinfectante" x:Name="LblTP" Style="{StaticResource Key=EstiloDeEtiquetas}" />
 
                     <StackLayout x:Name="contenedor">
 
                         <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp1"/>
-                        <Label Text="Suavitel" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Label Text="Protex Gel" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
                         <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp2"/>
-                        <Label Text="Downy" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Label Text="Laboratorios Lam (Manitas Limpias)" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
                         <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp3"/>
-                        <Label Text="Ensueño" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
-                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp4"/>
-                        <Label Text="Brillante" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
-                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp5"/>
-                        <Label Text="Marca Privada" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
-                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp6"/>
-                        <Label Text="Otros" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
-                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp7"/>
                         
-                        <Label Style="{StaticResource Key=EstiloDeEtiquetas3}" x:Name="LblTotalSUAV"/>
-                        <Label Style="{StaticResource Key=EstiloDeEtiquetas}" x:Name="LblPorcentajeSUAV" />
+                        <Label Text="Marca Privada" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Marca Privada" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp4"/>
+                        <Label Text="Otros" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp5"/>
+                        <Label Style="{StaticResource Key=EstiloDeEtiquetas3}" x:Name="LblTotalGDESF"/>
+                        <Label Style="{StaticResource Key=EstiloDeEtiquetas}" x:Name="LblPorcentajeGDESF" />
 
                         <Button Text="Calcular totales y porcentajes" x:Name="Btn1" Style="{StaticResource Key=EstiloDeBoton2}" Clicked="Btn1_Clicked"/>
                         <Button Text="Siguiente Categoría" x:Name="Btn2" Style="{StaticResource Key=EstiloDeBoton2}" Clicked="Btn2_Clicked"/>
