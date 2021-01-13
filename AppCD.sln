@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCD.Android", "AppCD\AppC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCD.iOS", "AppCD\AppCD.iOS\AppCD.iOS.csproj", "{D0E09B8F-E6B4-4D07-B52C-8F892199E9E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCD", "AppCD\AppCD\AppCD.csproj", "{D33F51C5-B9FC-4311-B8B2-D8B991EDEC9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppCD", "AppCD\AppCD\AppCD.csproj", "{D33F51C5-B9FC-4311-B8B2-D8B991EDEC9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A602368-4A97-4964-8674-FA23BC56F755}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
