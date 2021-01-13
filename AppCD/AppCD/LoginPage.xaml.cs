@@ -72,7 +72,7 @@ namespace AppCD
         //public Command Register { get; set; }
         #endregion Propiedades
 
-        private HttpClient client = new HttpClient();
+        public HttpClient client = new HttpClient();
 
         public LoginPage()
         {
@@ -92,24 +92,29 @@ namespace AppCD
         {
             IsBusy = true;
 
-            var credentials = new
+            string payload = JsonConvert.SerializeObject(new
             {
-                identificador = Cod,
-                password = Password
-            };
+                
 
-            string json = JsonConvert.SerializeObject(credentials, Formatting.Indented);
-            var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+                username = Cod,
+                password = Password,
+            });
+
+            //var client = new HttpClient();
+            var content = new StringContent(payload, Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync(URL, content);
 
             /*HttpResponseMessage response1 = await client.GetAsync("http://66.42.91.17:81/api/profit_usuarios/1000");
             await DisplayAlert("Hola",Convert.ToString(response1),"Ok");*/
 
             //await DisplayAlert("Hola", Convert.ToString(URL), "Ok");
 
-            var response = await this.client.PostAsync(URL, content);
+            
+            
+            //var response = await this.client.PostAsync(URL, content);
 
             
-
             var valor = response;
             //await DisplayAlert("Hola",Convert.ToString(response),"Ok");
             if (response.IsSuccessStatusCode)

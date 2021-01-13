@@ -6,10 +6,74 @@
              mc:Ignorable="d"
              x:Class="AppCD.MedidasEspacioSuav">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+
+            <StackLayout >
+
+                <StackLayout >
+
+                    <!--Picker Title="Seleccione una tienda"
+                    TitleColor="Gray" x:Name="SBPuntos">
+                    <Picker.Items>
+                        <x:String>Sirena Villa Mella</x:String>
+                        <x:String>Bravo Churchill</x:String>
+                        <x:String>Jumbo Luperon</x:String>
+                        <x:String>Ole Playa Boca Chica</x:String>
+                    </Picker.Items>
+                </-->
+
+                    <Label Text="Punto de Venta" x:Name="LblTP0" Style="{StaticResource Key=EstiloDeEtiquetas}" />
+                    <Label Text="Tienda" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                    <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp0"/>
+
+
+
+                    <Label Text="Cremas Dentales" x:Name="LblTP" Style="{StaticResource Key=EstiloDeEtiquetas}" />
+                    <Label Text="Anticaries" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+
+                    <StackLayout x:Name="contenedor">
+
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp1"/>
+                        <Label Text="Triple Acción" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp2"/>
+                        <Label Text="Total Base" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp3"/>
+                        <Label Text="Total Profesional" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp4"/>
+                        <Label Text="Luminous White" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp5"/>
+                        <Label Text="Pro-Alivio Base (2-Pack)" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp6"/>
+                        <Label Text="Pro-Alivio CSPR" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp7"/>
+                        <Label Text="Resto Colgate" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp8"/>
+                        <Label x:Name="LblTotalTPCP" Style="{StaticResource Key=EstiloDeEtiquetas3}"/>
+
+                        <Label Text="Oral B" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp9"/>
+                        <Label Text="Crest " Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp10"/>
+                        <Label Style="{StaticResource Key=EstiloDeEtiquetas3}" x:Name="LblTotalTPPG"/>
+
+                        <Label Text="Sensodyne" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp11"/>
+                        <Label Text="Aquafresh" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp12"/>
+                        <Label Text="Centra Line" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp13"/>
+                        <Label Text="Marca Privada" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp14"/>
+                        <Label Text="Otras Marcas" Style="{StaticResource Key=EstiloDeEtiquetas2}"/>
+                        <Entry Keyboard="Numeric" Placeholder="Respuesta" Style="{StaticResource Key=EstiloDeEntrada}" x:Name="Resp15"/>
+                        <Label Style="{StaticResource Key=EstiloDeEtiquetas3}" x:Name="LblTotalTP"/>
+                        <Label Style="{StaticResource Key=EstiloDeEtiquetas}" x:Name="LblPorcentajeTP" />
+
+                        <Button Text="Calcular totales y porcentajes" x:Name="Btn1" Style="{StaticResource Key=EstiloDeBoton2}" Clicked="Btn1_Clicked"/>
+                        <Button Text="Siguiente Categoría" x:Name="Btn2" Style="{StaticResource Key=EstiloDeBoton2}" Clicked="Btn2_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
