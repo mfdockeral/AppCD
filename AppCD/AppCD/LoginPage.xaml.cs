@@ -17,7 +17,7 @@ namespace AppCD
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
 	{
-		/*async private void Button_Clicked(object sender, EventArgs e)
+		async private void Button_Clicked(object sender, EventArgs e)
 		{
             if (TxtUser.Text == "602" && TxtPassword.Text == "profit26")
 			{
@@ -29,11 +29,11 @@ namespace AppCD
                 await DisplayAlert("ERROR!", "Datos ingresados no son los correctos", "Ok");
                 return;
 			}
-		}*/
+		}
 
 
 
-		private const string URL = @"http://66.42.91.17:81/api/profit_usuarios/id";
+		private const string URL = @"http://66.42.91.17:81/api/profit_usuarios/1000";
 
         #region Propiedades
         private string _cod;
@@ -94,15 +94,24 @@ namespace AppCD
 
             var credentials = new
             {
-                cod = Cod,
+                identificador = Cod,
                 password = Password
             };
 
-            string json = JsonConvert.SerializeObject(credentials);
-            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+            string json = JsonConvert.SerializeObject(credentials, Formatting.Indented);
+            var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+
+            /*HttpResponseMessage response1 = await client.GetAsync("http://66.42.91.17:81/api/profit_usuarios/1000");
+            await DisplayAlert("Hola",Convert.ToString(response1),"Ok");*/
+
+            //await DisplayAlert("Hola", Convert.ToString(URL), "Ok");
 
             var response = await this.client.PostAsync(URL, content);
 
+            
+
+            var valor = response;
+            //await DisplayAlert("Hola",Convert.ToString(response),"Ok");
             if (response.IsSuccessStatusCode)
             {
                 var jsonResponse = await response.Content.ReadAsStringAsync();

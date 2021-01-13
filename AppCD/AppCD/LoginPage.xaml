@@ -36,9 +36,9 @@
 
             <Entry Placeholder="Usuario"
                   x:Name="TxtUser"
-                   Text="{Binding User}"
+                   Text="{Binding Cod}"
                    HorizontalOptions="FillAndExpand"
-                   Keyboard="Numeric"
+                   
                    Style="{StaticResource Key=EstiloDeEntrada}"/>
 
             <!-- Agregar el Binding al campo  Password-->
